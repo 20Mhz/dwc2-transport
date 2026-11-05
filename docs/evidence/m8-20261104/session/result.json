@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "milestone": "M8",
+  "status": "PASS",
+  "returncode": 0,
+  "identity_change_captured": false,
+  "procedure_status": "PENDING_VERIFIED_PROCEDURE",
+  "children_reaped": true,
+  "outcome": "NO_IDENTITY_CHANGE_OBSERVED"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "test": "D2",
+  "returncodes": [
+    0
+  ],
+  "runs": [
+    {
+      "test": "D2",
+      "status": "PASS",
+      "errors": [],
+      "summary": {
+        "event": "summary",
+        "polls": 892,
+        "connected": 1,
+        "reconnected": 1,
+        "disconnected": 1,
+        "errors": 0,
+        "probes_ok": 2,
+        "probes_failed": 0,
+        "discovery_successes": 892,
+        "probes_pending": 0,
+        "completion_status": "complete",
+        "reason": "reconnected",
+        "physical_identity_verification": false,
+        "schema": 2,
+        "sequence": 7,
+        "mono_ns": 30424451542829,
+        "elapsed_ns": 445921726157,
+        "time_utc": "2026-11-04T23:25:34.851931+00:00"
+      }
+    }
+  ],
+  "children_reaped": true,
+  "status": "PASS"
+}

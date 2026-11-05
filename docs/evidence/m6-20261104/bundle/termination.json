@@ -1,0 +1,19 @@
+{
+  "ready_before_signal": true,
+  "returncode": 0,
+  "summary": {
+    "connected": 1,
+    "disconnected": 0,
+    "errors": 0,
+    "event": "summary",
+    "mono_ns": 3787848676985,
+    "physical_identity_verification": false,
+    "polls": 1,
+    "probes_failed": 0,
+    "probes_ok": 0,
+    "reason": "signal",
+    "reconnected": 0,
+    "schema": 1,
+    "time_utc": "2026-11-04T16:01:38.249049+00:00"
+  }
+}

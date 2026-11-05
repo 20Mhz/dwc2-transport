@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "milestone": "M8",
+  "release_version": "1.2.0",
+  "criteria": {
+    "bounded_session": "PASS",
+    "appropriate_timing_uncertainty": "PASS",
+    "source_backed_identity_assessment": "PASS",
+    "recovery_dfu_distinction": "PASS",
+    "physical_mode_entry_experiment": "PENDING_VERIFIED_PROCEDURE",
+    "regressions": "PASS",
+    "pi_armv6_execution": "PASS",
+    "strict_evidence_verifier": "PASS",
+    "reproducible_privacy_reviewed_archives": "PASS",
+    "local_commits": "PASS"
+  },
+  "identity_change_captured": false,
+  "experimental_outcome": "NO_IDENTITY_CHANGE_OBSERVED",
+  "pending_step_reason": "No applicable manufacturer-documented non-destructive state-entry sequence was verified; no such action was requested or automated.",
+  "acceptance_basis": "M8 explicitly allows a documented pending physical step; no transition is manufactured from M7 sessions.",
+  "publication": "local artifacts only; no publish, remote tag or push"
+}

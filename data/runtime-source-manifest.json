@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "basis": "Official Debian pool; archive hashes verified against source descriptor SHA-256 fields. Descriptor signatures were not independently verified.",
+  "files": [
+    {
+      "sha256": "a543c02070d46ccaf866957efd13f10c924daa74c86a90a0254db09a92a708ee",
+      "bytes": 19363988,
+      "name": "glibc_2.36.orig.tar.xz",
+      "url": "https://deb.debian.org/debian/pool/main/g/glibc/glibc_2.36.orig.tar.xz",
+      "source_package": "glibc",
+      "source_version": "2.36-8"
+    },
+    {
+      "sha256": "c037743ceedcfc601ce66da33552c7301c77eae029eb9ed98c15c0ebed5a0984",
+      "bytes": 831264,
+      "name": "glibc_2.36-8.debian.tar.xz",
+      "url": "https://deb.debian.org/debian/pool/main/g/glibc/glibc_2.36-8.debian.tar.xz",
+      "source_package": "glibc",
+      "source_version": "2.36-8"
+    },
+    {
+      "name": "glibc_2.36-8.dsc",
+      "sha256": "6004f64f66a4ba78ed5dffaca842061717de8b02f42085d093ae8439a4285754",
+      "bytes": 9729,
+      "url": "https://deb.debian.org/debian/pool/main/g/glibc/glibc_2.36-8.dsc",
+      "source_package": "glibc",
+      "source_version": "2.36-8"
+    },
+    {
+      "sha256": "b9f62c8f100c338729bc2e167666c9d74fbca97825b37b488f4254ddde43a05e",
+      "bytes": 42996,
+      "name": "cross-toolchain-base_66.tar.xz",
+      "url": "https://deb.debian.org/debian/pool/main/c/cross-toolchain-base/cross-toolchain-base_66.tar.xz",
+      "source_package": "cross-toolchain-base",
+      "source_version": "66"
+    },
+    {
+      "name": "cross-toolchain-base_66.dsc",
+      "sha256": "5f34fa0360f5f4c345557ba22941b2b98e45ae4986ad8250220f85c6603e1148",
+      "bytes": 5715,
+      "url": "https://deb.debian.org/debian/pool/main/c/cross-toolchain-base/cross-toolchain-base_66.dsc",
+      "source_package": "cross-toolchain-base",
+      "source_version": "66"
+    }
+  ],
+  "toolchain_requirements": {
+    "libc6-armel-cross": "2.36-8cross1",
+    "libc6-dev-armel-cross": "2.36-8cross1",
+    "libgcc-12-dev-armel-cross": "12.2.0-14cross1"
+  }
+}

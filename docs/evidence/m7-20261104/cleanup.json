@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "evidence_kind": "physical_observation",
+  "time_utc": "2026-11-04T23:29:01.637350+00:00",
+  "scope": "M7 observers and descriptor processes after completed cable-only, recovery baseline and lifecycle runs",
+  "lingering_processes": [],
+  "status": "PASS"
+}

@@ -1,0 +1,61 @@
+{
+  "backend": "linux-usbfs",
+  "capabilities": 63,
+  "device": {
+    "address": 7,
+    "bus": 1,
+    "class": 0,
+    "controller": "dwc2",
+    "driver": "",
+    "identification": {
+      "caveat": "Not a documented DFU/recovery PID. A matching ff/fe/02 interface suggests usbmux compatibility; PID alone does not prove A1427 or OS health.",
+      "confidence": "documented_family_only",
+      "database_version": "1.0.0",
+      "label": "Apple TV USB device",
+      "model": "unverified",
+      "model_verified": false,
+      "source_urls": [
+        "https://github.com/usbids/usbids/blob/5eb613762db1e34b9218da63a88f22dd26f743c5/usb.ids",
+        "https://github.com/libimobiledevice/usbmuxd/blob/3ded00c9985a5108cfc7591a309f9a23d57a8cba/src/usb.h",
+        "https://support.apple.com/en-us/101605"
+      ]
+    },
+    "path": "/dev/bus/usb/001/007",
+    "port_count": 1,
+    "ports": [
+      1
+    ],
+    "product_id": 4775,
+    "speed": "high",
+    "sysfs_name": "1-1",
+    "usb_mode": "apple_tv_usb",
+    "vendor_id": 1452
+  },
+  "platform": {
+    "kernel": "6.12.47+rpt-rpi-v6",
+    "kprobes_accessible": true,
+    "machine": "armv6l",
+    "model": "Raspberry Pi Zero W Rev 1.1",
+    "system": "Linux",
+    "tracefs_accessible": true,
+    "usbmon_accessible": true
+  },
+  "schema": 1,
+  "sdk_api": 65536,
+  "sdk_features": {
+    "async_control": true,
+    "async_endpoint": true,
+    "cancel": true,
+    "claim": true,
+    "control": true,
+    "reset": true
+  },
+  "sdk_version": "1.1.0",
+  "transfers": {
+    "cancelled": 0,
+    "errors": 0,
+    "ok": 25,
+    "requested": 25,
+    "timeouts": 0
+  }
+}

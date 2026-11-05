@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "evidence_kind": "physical_observation",
+  "kernel": "6.12.47+rpt-rpi-v6",
+  "sdk_revision": "e1f9b5bbd684835e47420e9f87e1034c3f08cab7",
+  "application_revision": "7bc4a98c592c36b20f369abca7101d43c797e693",
+  "binary_sha256": "6dee895bc874900f9a1f2be08753ace23c844b310ae0886ca123f6e3ab0f2431",
+  "output_sha256": "d467277a8f949eb7907269be508aa0922d1b6f931a3d6bfc0e68b15b14776271",
+  "file_written_at_utc": "2026-11-04T23:27:42.929053+00:00",
+  "parameters": {
+    "device_selector": "05ac:1281",
+    "profile": "apple-tv-a1427",
+    "include_serial": false
+  },
+  "operation": "standard device-to-host descriptor inspection; no interface claim or state change"
+}

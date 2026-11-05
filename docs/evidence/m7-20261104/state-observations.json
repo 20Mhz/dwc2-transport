@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "evidence_kind": "physical_observation",
+  "identities": [
+    {
+      "vid_pid": "05ac:12a7",
+      "identity_category": "application",
+      "state_category": "ambiguous",
+      "model_verified": false,
+      "evidence": "additional-observations/D1-application/observer-0.jsonl"
+    },
+    {
+      "vid_pid": "05ac:1281",
+      "identity_category": "recovery",
+      "state_category": "recovery",
+      "state_verified": false,
+      "model_verified": false,
+      "evidence": "bundle/D2/observer-0.jsonl"
+    }
+  ],
+  "transition_between_identities": "not continuously captured; entry mechanism unverified",
+  "dfu_operation_verified": false
+}

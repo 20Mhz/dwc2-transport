@@ -1,0 +1,12 @@
+{
+  "status": "INCONCLUSIVE_OPERATOR_REBOOT",
+  "automated_descriptor_recovery": "PASS",
+  "operator_report": {
+    "source": "operator_report",
+    "cable_reconnected": true,
+    "power_maintained": null,
+    "reboot_reported": true,
+    "note": "Operator confirmed reconnection and reported needing a reboot because the Apple TV appeared asleep and no remote was available. Which transitions correspond to the reboot is not independently established."
+  },
+  "scope": "Not a cable-only pass; retained unchanged observation history with a later operator assessment."
+}

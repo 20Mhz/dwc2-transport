@@ -1,0 +1,23 @@
+name: sdk
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  native:
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, macos-14]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmake -S . -B build/test -DDT_SANITIZERS=ON
+      - run: cmake --build build/test --parallel 4
+      - run: ctest --test-dir build/test --output-on-failure
+      - run: make all test
+      - run: cmake -S . -B build/shared -DBUILD_SHARED_LIBS=ON && cmake --build build/shared --parallel 4 && ctest --test-dir build/shared --output-on-failure
+      - run: cmake --install build/shared --prefix "$RUNNER_TEMP/sdk"
+      - run: cmake -S tests/integration/consumer -B build/consumer -DCMAKE_PREFIX_PATH="$RUNNER_TEMP/sdk" && cmake --build build/consumer && build/consumer/consumer --mock
+  armv6:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: scripts/build-armv6.sh
+      # Releases are packaged separately with audited, matching runtime sources.

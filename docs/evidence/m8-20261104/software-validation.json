@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "evidence_kind": "software_validation",
+  "native_sanitizer_targets": 14,
+  "linux_sanitizer_targets": 15,
+  "armv6": "Make/QEMU ARM1176, ELF v6KZ and ARMv7 negative control passed",
+  "targeted_python_tests": {
+    "timeline": 9,
+    "release": 2,
+    "observer": 19,
+    "recording": 7,
+    "evidence": 7,
+    "privacy": 2,
+    "capture": 6
+  },
+  "source_export": "Git-free wrapper rebuilt the RC2 source archive; CLI and static library bytes matched",
+  "installation": "installed observer/annotation help and C mock inspection passed",
+  "fixtures": "M7 snapshots are separate observations; any joined fixture transition is simulation only",
+  "limits": [
+    "Hosted CI not run.",
+    "Runtime itself not rebuilt; pinned corresponding sources and notices supplied.",
+    "Raw software logs stay local because they contain development paths."
+  ]
+}

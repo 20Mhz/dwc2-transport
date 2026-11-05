@@ -1,0 +1,45 @@
+{
+  "storage": "local-only",
+  "files": [
+    {
+      "path": "SHA256SUMS",
+      "sha256": "af4bf7b91d262d8d2618d39def86541c0a0c24bfcb6086b7597f022be4af3494"
+    },
+    {
+      "path": "metadata.json",
+      "sha256": "1fa9f26b2480d6d357e0592ce8bcd0add94bb51be500f86e7307b104ead3101e"
+    },
+    {
+      "path": "observer-0.jsonl",
+      "sha256": "fdbf8354b8237b7914739fec19fbbc356c5d660b4c7e84312353e48de907ca2d"
+    },
+    {
+      "path": "observer-0.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator-input.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preflight.json",
+      "sha256": "7a6e1bcfc481fee24a4674695671e113c293e9f1a3630479b6c63580533e2f5d"
+    },
+    {
+      "path": "result.json",
+      "sha256": "41ebc04cc6cdcd58cfebd5d346579d188eade14462b8768ce89a7427d0fdb53e"
+    },
+    {
+      "path": "session.json",
+      "sha256": "ac27497228bb52540822731e631fb0ce52031893c52e522fc2484242e86310e0"
+    },
+    {
+      "path": "timeline.json",
+      "sha256": "073c94ec024d299dcd562a6bf9aa7bf0d6a09f6e91de592b5fe64f355cf682f4"
+    },
+    {
+      "path": "timeline.md",
+      "sha256": "200e28a7407104c0e2b41a6b52b18ad3bf052a737234bee0dc6b4a651804511d"
+    }
+  ]
+}

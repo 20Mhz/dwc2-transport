@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "test": "D4",
+  "returncodes": [
+    0,
+    0,
+    0
+  ],
+  "runs": [
+    {
+      "test": "D4",
+      "status": "PASS",
+      "errors": [],
+      "summary": {
+        "event": "summary",
+        "polls": 1,
+        "connected": 1,
+        "reconnected": 0,
+        "disconnected": 0,
+        "errors": 0,
+        "probes_ok": 0,
+        "probes_failed": 0,
+        "discovery_successes": 1,
+        "probes_pending": 0,
+        "completion_status": "complete",
+        "reason": "signal",
+        "physical_identity_verification": false,
+        "schema": 2,
+        "sequence": 3,
+        "mono_ns": 10191863322041,
+        "elapsed_ns": 209816477,
+        "time_utc": "2026-11-04T17:48:22.263709+00:00"
+      }
+    },
+    {
+      "test": "D4",
+      "status": "PASS",
+      "errors": [],
+      "summary": {
+        "event": "summary",
+        "polls": 1,
+        "connected": 1,
+        "reconnected": 0,
+        "disconnected": 0,
+        "errors": 0,
+        "probes_ok": 0,
+        "probes_failed": 0,
+        "discovery_successes": 1,
+        "probes_pending": 0,
+        "completion_status": "complete",
+        "reason": "signal",
+        "physical_identity_verification": false,
+        "schema": 2,
+        "sequence": 3,
+        "mono_ns": 10193105082383,
+        "elapsed_ns": 209579495,
+        "time_utc": "2026-11-04T17:48:23.505470+00:00"
+      }
+    },
+    {
+      "test": "D4",
+      "status": "PASS",
+      "errors": [],
+      "summary": {
+        "event": "summary",
+        "polls": 1,
+        "connected": 1,
+        "reconnected": 0,
+        "disconnected": 0,
+        "errors": 0,
+        "probes_ok": 0,
+        "probes_failed": 0,
+        "discovery_successes": 1,
+        "probes_pending": 0,
+        "completion_status": "complete",
+        "reason": "signal",
+        "physical_identity_verification": false,
+        "schema": 2,
+        "sequence": 3,
+        "mono_ns": 10194370760178,
+        "elapsed_ns": 215162360,
+        "time_utc": "2026-11-04T17:48:24.771149+00:00"
+      }
+    }
+  ],
+  "children_reaped": true,
+  "status": "PASS"
+}

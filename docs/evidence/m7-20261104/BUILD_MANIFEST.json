@@ -1,0 +1,43 @@
+{
+  "sdk_revision": "e1f9b5bbd684835e47420e9f87e1034c3f08cab7",
+  "target": "ARM1176 ARMv6KZ static armel",
+  "flags": "-O2 -march=armv6kz -marm -static",
+  "source_sha256": {
+    "CMakeLists.txt": "d7c1c134bc966d8d2920a88bab991b28816327c5cec78fc35a6578110147bfc6",
+    "Makefile": "0c69c3843bdd2d2a96a72743f34757ff172b0ffab84ffd84b088bc706b3d2020",
+    "data/device-identification-v1.json": "cfae4ddc79ac8d6148dd78be767ffd43617a4de124769da3be334af3940e785c",
+    "docker/Dockerfile": "c1ed9836efbf52cf6b6bc5ec4e498e6f70f4c4de50db5e4bf46589fd6a52df41",
+    "include/dwc2_transport/capabilities.h": "f0ce1ee04dd6648ecaca58096a1f92e7c46c3d09777891ce1aedeb528d57562e",
+    "include/dwc2_transport/device.h": "c5257ffffd7630f990923ccb11073f5d4747ae3cf5cd73c96816cade203d2210",
+    "include/dwc2_transport/errors.h": "987d407ecead87959fee31b3f958bfb12af79da0866d44810273a92785e98514",
+    "include/dwc2_transport/mock.h": "b4564cd556af8cf825746d4c3cd38ce5b435233e0d0ed4cda276320d49499fb2",
+    "include/dwc2_transport/transport.h": "565fd5648b579f60cd2e8bbc2d8e9873f35a8621b08f346a93e43887f6a06b00",
+    "scripts/build-armv6.sh": "8d909ed5a262004e067be8f1175c935a691efa58b917d990796222432bd554f2",
+    "src/common/async.c": "b1f2979a4f6a3a1aab507b88ed3edcbf6923cfa48bbd1c279f273a2a03807ccd",
+    "src/common/core.c": "c9e8684f15b1cbd1410b854dfce544917a478a77d9ecfaef987c0363c66e1932",
+    "src/common/internal.h": "619573b981d33eb8ebf33202e73da28be2a7b49d92e244d97268d6e59ba8baa1",
+    "src/linux/usbfs.c": "9c4e8bc9bff623a7f109706b662ac157f1497e9449d7526889839c0b30bbbd4e",
+    "src/mock/mock.c": "1cda70152535e20d7d0782577c1c43424aa2f7986cf260ae1e8e3ab58e70e6a2",
+    "tools/cli.c": "42855be6930f1e94631c87a1dc78865eb9d37d51a64bd65b0d703310e2d613a4",
+    "tools/diagnostics/descriptors.c": "789018dc43706d5ebbf8615c3ef75e5ec1de9134e4e65a0c135e7bd04d6d5460",
+    "tools/diagnostics/descriptors.h": "816d0420b7c924aa199b74cf0e06b604b20b767600b34325fa8d65cb0033a58f",
+    "tools/diagnostics/device_db.h": "ef4f2267429bb0ea6b7cf71da13bcb1b427df8f627030e106105dc6e8fe8c14f",
+    "tools/hostlab/clock.c": "c774ed758d37f7f9aafb21d32c632aee2b72fce62b6e048b407cb1207b9e3c88",
+    "tools/hostlab/hl_clock.h": "dc30ad6dd8dc99ae689a3a275a038bdd182b541a4b8a320db04c7661061e4450",
+    "tools/hostlab/jsonl.c": "01eda4e774bb529d4d4211bbbb717cfe7f02b65d60fe340e05c440ba8848d5de",
+    "tools/hostlab/jsonl.h": "9a0e56172b73950ac2d529123d1080d898a0e5753c8a582632f25288a69ef11f"
+  },
+  "binary_sha256": {
+    "libdwc2_transport.a": "afc18be854a3c6a354d75007e0f5aa1f54fcda821cc3f28db7f5a777e128eec5",
+    "read-descriptor": "60f65056b94454d59f23ad6a71d71fc46c97aa39871a1df5435f31fbe90fc6ba",
+    "test-async": "e00e976be175828aa1f1b0401b081d8e35bb2041a9457cc30ab2c9681a620817",
+    "test-core": "a45e51545e79eff6caa585b19dbacd8cde979c1b896cf5566cd55cb45a4f28da",
+    "test-descriptors": "e74f57ed753ede2a742b5b82441a3c6c358e5427f2138039943803ecea431931",
+    "test-hardware": "64f3d7d02620b9fdc5d869bb4502aaea36e74bfb0339b0c281425ee79cbde174",
+    "test-inspection": "b8b035bb5d82ffc3a9a42335c409051b42f8f8145b7d2771e62e1f6f43c80002",
+    "test-replay": "e541c46046604a1e632d306e57e9ed792e87f103e251429578e22476df0f93a4",
+    "usb-diagnostics": "6dee895bc874900f9a1f2be08753ace23c844b310ae0886ca123f6e3ab0f2431",
+    "usb-discover": "6dee895bc874900f9a1f2be08753ace23c844b310ae0886ca123f6e3ab0f2431",
+    "usb-inspect": "6dee895bc874900f9a1f2be08753ace23c844b310ae0886ca123f6e3ab0f2431"
+  }
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+import sys
+from pathlib import Path
+here = Path(__file__).resolve().parent
+for root in (here.parent, here.parent / 'share/dwc2-transport'):
+    if (root / 'python/dwc2_diag').is_dir():
+        sys.path.insert(0, str(root / 'python'))
+        break
+from dwc2_diag.observer import main
+raise SystemExit(main())

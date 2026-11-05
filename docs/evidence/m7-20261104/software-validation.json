@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "native_ctest_targets": 12,
+  "linux_ctest_targets": 13,
+  "armv6": "Make tests under QEMU ARM1176, ELF v6KZ and ARMv7 negative control passed",
+  "python_tests": {
+    "observer": 19,
+    "evidence": 7,
+    "recording": 7,
+    "privacy": 2,
+    "apple_capture": 6
+  },
+  "archive_repackaging": "two archives from the same inputs matched byte for byte",
+  "packaged_source_rebuild": "passed ARMv6 tests; usb-discover and static library matched supplied bytes after correcting archive member order",
+  "relink": "supplied CLI objects and static SDK library relinked and ran --version under QEMU",
+  "installation": "installed wrappers locate helpers/database and mock inspection passes",
+  "raw_software_logs": "local build/; omitted from public export because they contain development paths",
+  "evidence_kind": "software_validation",
+  "limitations": [
+    "Hosted CI was not run.",
+    "Historical M6 results were not repeated or counted as new tests.",
+    "A recovery identity was observed; its entry sequence and DFU operation were not verified."
+  ]
+}

@@ -1,0 +1,10 @@
+prefix=${pcfiledir}/@DT_PC_PREFIX@
+exec_prefix=${prefix}
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: dwc2-transport
+Description: Conventional Linux usbfs transport SDK with deterministic mock
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -ldwc2_transport
+Cflags: -I${includedir}

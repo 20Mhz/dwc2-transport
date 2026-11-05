@@ -1,0 +1,215 @@
+{
+  "schema": 1,
+  "version": "1.2.0",
+  "reviewed_date": "2026-11-04",
+  "sources": {
+    "usbids": {
+      "url": "https://github.com/usbids/usbids/blob/5eb613762db1e34b9218da63a88f22dd26f743c5/usb.ids",
+      "revision": "5eb613762db1e34b9218da63a88f22dd26f743c5",
+      "sha256": "f5a48b0cc8dae1607c2f0bae6b8dc13f2ecef69dbeaeaf34b4be8e280d34dba4",
+      "claim": "Registry lists 05ac:12a7 as TV Device; no exact model or firmware state is specified."
+    },
+    "usbmuxd": {
+      "url": "https://github.com/libimobiledevice/usbmuxd/blob/3ded00c9985a5108cfc7591a309f9a23d57a8cba/src/usb.h",
+      "revision": "3ded00c9985a5108cfc7591a309f9a23d57a8cba",
+      "claim": "Recognizes Apple product range 1290..12af and interface class/subclass/protocol ff/fe/02. Descriptor compatibility does not prove protocol or firmware health."
+    },
+    "libirecovery": {
+      "url": "https://github.com/libimobiledevice/libirecovery/blob/046344f7fe4413e42e71046a34230850be3f758a/include/libirecovery.h",
+      "revision": "046344f7fe4413e42e71046a34230850be3f758a",
+      "claim": "Public mode enum defines recovery PIDs 1280..1283, DFU 1227, WTF 1222, and port DFU f014; IDs are shared across products."
+    },
+    "apple_model": {
+      "url": "https://support.apple.com/en-us/101605",
+      "claim": "Apple lists A1427/A1469 as third-generation Apple TV models; verify the physical label separately. No USB PID mapping is provided."
+    },
+    "libirecovery_interfaces": {
+      "url": "https://github.com/libimobiledevice/libirecovery/blob/046344f7fe4413e42e71046a34230850be3f758a/src/libirecovery.c",
+      "revision": "046344f7fe4413e42e71046a34230850be3f758a",
+      "claim": "Recovery receive path selects interface 1 alternate 1 and bulk IN 0x81; consistent with the observed configuration alternatives, without proving protocol behavior."
+    },
+    "usb_dfu_1_1": {
+      "url": "https://www.usb.org/sites/default/files/DFU_1.1.pdf",
+      "revision": "USB DFU 1.1, 2004-08-05, section 4.2.3/table 4.4",
+      "claim": "DFU-mode interface uses fe/01/02 with zero non-control endpoints. A class triple alone does not establish a conformant descriptor set or authenticated boot state."
+    }
+  },
+  "devices": [
+    {
+      "vendor_id": 1452,
+      "product_id": 4775,
+      "label": "Apple TV USB device",
+      "registry_label": "TV Device",
+      "mode": "apple_tv_usb",
+      "confidence": "documented_family_only",
+      "model": "unverified",
+      "possible_models": [
+        "Apple TV family; exact generation/model unverified"
+      ],
+      "sources": [
+        "usbids",
+        "usbmuxd",
+        "apple_model"
+      ],
+      "caveat": "Not a documented DFU/recovery PID. A matching ff/fe/02 interface suggests usbmux compatibility; PID alone does not prove A1427 or OS health. Application-family association only; current operating state is ambiguous.",
+      "identity_category": "application",
+      "state_category": "ambiguous",
+      "state_verified": false,
+      "evidence_basis": "public_project_documentation"
+    },
+    {
+      "vendor_id": 1452,
+      "product_id": 4647,
+      "label": "Apple DFU USB identity",
+      "registry_label": "Mobile Device (DFU Mode)",
+      "mode": "dfu",
+      "confidence": "documented_shared_mode_id",
+      "model": "unverified",
+      "possible_models": [],
+      "sources": [
+        "libirecovery",
+        "usbids"
+      ],
+      "caveat": "Shared across Apple devices; exact model and security state are not established.",
+      "identity_category": "dfu",
+      "state_category": "dfu",
+      "state_verified": false,
+      "evidence_basis": "public_project_documentation"
+    },
+    {
+      "vendor_id": 1452,
+      "product_id": 4736,
+      "label": "Apple recovery USB identity",
+      "registry_label": "Recovery mode enum",
+      "mode": "recovery",
+      "confidence": "documented_shared_mode_id",
+      "model": "unverified",
+      "possible_models": [],
+      "sources": [
+        "libirecovery"
+      ],
+      "caveat": "Shared mode identifier; exact Apple product/model is unverified.",
+      "identity_category": "recovery",
+      "state_category": "recovery",
+      "state_verified": false,
+      "evidence_basis": "public_project_documentation"
+    },
+    {
+      "vendor_id": 1452,
+      "product_id": 4737,
+      "label": "Apple recovery USB identity",
+      "registry_label": "Apple Mobile Device [Recovery Mode]",
+      "mode": "recovery",
+      "confidence": "documented_shared_mode_id",
+      "model": "unverified",
+      "possible_models": [],
+      "sources": [
+        "libirecovery",
+        "usbids",
+        "libirecovery_interfaces",
+        "usb_dfu_1_1"
+      ],
+      "caveat": "Shared recovery-associated identity. Observed alternate-interface endpoints match published recovery code; fe/01/02 alone does not prove DFU operation, model or security state.",
+      "identity_category": "recovery",
+      "state_category": "recovery",
+      "state_verified": false,
+      "evidence_basis": "public_project_documentation"
+    },
+    {
+      "vendor_id": 1452,
+      "product_id": 4738,
+      "label": "Apple recovery USB identity",
+      "registry_label": "Recovery mode enum",
+      "mode": "recovery",
+      "confidence": "documented_shared_mode_id",
+      "model": "unverified",
+      "possible_models": [],
+      "sources": [
+        "libirecovery"
+      ],
+      "caveat": "Shared mode identifier; exact Apple product/model is unverified.",
+      "identity_category": "recovery",
+      "state_category": "recovery",
+      "state_verified": false,
+      "evidence_basis": "public_project_documentation"
+    },
+    {
+      "vendor_id": 1452,
+      "product_id": 4739,
+      "label": "Apple recovery USB identity",
+      "registry_label": "Recovery mode enum",
+      "mode": "recovery",
+      "confidence": "documented_shared_mode_id",
+      "model": "unverified",
+      "possible_models": [],
+      "sources": [
+        "libirecovery"
+      ],
+      "caveat": "Shared mode identifier; exact Apple product/model is unverified.",
+      "identity_category": "recovery",
+      "state_category": "recovery",
+      "state_verified": false,
+      "evidence_basis": "public_project_documentation"
+    },
+    {
+      "vendor_id": 1452,
+      "product_id": 4642,
+      "label": "Apple WTF USB identity",
+      "registry_label": "WTF mode enum",
+      "mode": "wtf",
+      "confidence": "documented_shared_mode_id",
+      "model": "unverified",
+      "possible_models": [],
+      "sources": [
+        "libirecovery"
+      ],
+      "caveat": "Distinct from DFU; shared product identity.",
+      "identity_category": "ambiguous",
+      "state_category": "ambiguous",
+      "state_verified": false,
+      "evidence_basis": "public_project_documentation"
+    },
+    {
+      "vendor_id": 1452,
+      "product_id": 61460,
+      "label": "Apple port DFU USB identity",
+      "registry_label": "Port DFU mode enum",
+      "mode": "port_dfu",
+      "confidence": "documented_shared_mode_id",
+      "model": "unverified",
+      "possible_models": [],
+      "sources": [
+        "libirecovery"
+      ],
+      "caveat": "Distinct port-DFU identifier; no exact product/model claim.",
+      "identity_category": "dfu",
+      "state_category": "dfu",
+      "state_verified": false,
+      "evidence_basis": "public_project_documentation"
+    }
+  ],
+  "interface_signatures": [
+    {
+      "class": 255,
+      "subclass": 254,
+      "protocol": 2,
+      "name": "usbmux_compatible",
+      "confidence": "descriptor_inference",
+      "sources": [
+        "usbmuxd"
+      ],
+      "caveat": "No Apple protocol exchange is performed; compatibility and operational health remain untested."
+    }
+  ],
+  "classification_policy": {
+    "basis": "public documentation and descriptor inference; no boot-state authentication",
+    "categories": [
+      "application",
+      "recovery",
+      "dfu",
+      "unknown",
+      "ambiguous"
+    ],
+    "observed_state_verified": false
+  }
+}

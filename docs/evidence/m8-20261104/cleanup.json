@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "evidence_kind": "physical_observation",
+  "time_utc": "2026-11-05T02:43:16.859442+00:00",
+  "scope": "M8 observation and descriptor processes after final and interrupted runs",
+  "lingering_processes": [],
+  "status": "PASS"
+}

@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "evidence_kind": "physical_observation",
+  "time_utc": "2026-11-04T17:48:10.543952+00:00",
+  "sdk_revision": "e1f9b5bbd684835e47420e9f87e1034c3f08cab7",
+  "application_revision": "2dbd67e9c060b1b2858331d89b0df80cd743ef59",
+  "hostlab_revision": "9f61353dff0b671a4c089461c55665ca8a74777c",
+  "hostlab_revision_basis": "installed REVISION manifest",
+  "hostlab_binary_sha256": {
+    "hostlab-session": "d779db446603e0bc7dd4ee35b5cde81a3b0284d36206f712817a38f9551f6029",
+    "hostlab-analyze": "8cdc82930fe38315c49ec97eafcc4888bb7c76a6bd26c103873a6148b96550bf"
+  },
+  "kernel": "6.12.47+rpt-rpi-v6",
+  "machine": "armv6l",
+  "host_model": "Raspberry Pi Zero W Rev 1.1",
+  "hardware_revision": "9000c1",
+  "controller": "dwc2",
+  "controller_verification": "checked against observed snapshots",
+  "binary_sha256": {
+    "usb-discover": "6dee895bc874900f9a1f2be08753ace23c844b310ae0886ca123f6e3ab0f2431",
+    "usb-inspect": "6dee895bc874900f9a1f2be08753ace23c844b310ae0886ca123f6e3ab0f2431"
+  },
+  "application_sha256": {
+    "python/dwc2_diag/__init__.py": "dec121cdd25ca52d1cf1903726a426dc64c645dd3624f4350125d94392b95aa1",
+    "python/dwc2_diag/descriptors.py": "423ddabbc2ad0e2abdc7f8a0251f934412c06b92f866197909766efd90592b65",
+    "python/dwc2_diag/evidence.py": "3874ae8af42c533aca572d15ff9118df3e5216a76f8b82797866cd5bae965047",
+    "python/dwc2_diag/identification.py": "36c15d73655353c8d457be4a97b7283f54dd7e9a86e511addc5349458160544c",
+    "python/dwc2_diag/observer.py": "cabeaf7609fa8292c4c425c740f3d806770d20c883b539a482424b7f6f919d02",
+    "python/dwc2_diag/privacy.py": "85c6ae76f0b0ce6298762cd3855cbbc2b08a7faef8c874a64df544d56785c306",
+    "python/dwc2_diag/recording.py": "f86402dadf545ffc2e505080eee3ed1dfb7135683d31a1b6ce3b8f4943bc51c8",
+    "scripts/pi/m7-validate.py": "a087587deb487dfa52de42ebd887f7d54db9881fc53f869da797767e68e0f014"
+  },
+  "parameters": {
+    "test": "D1",
+    "duration_seconds": 8.0,
+    "interval_seconds": 0.5,
+    "iterations": 3,
+    "port": "1-1",
+    "probe_attempts": 3,
+    "probe_on_connect": true,
+    "operator_action": "none requested",
+    "physical_model": "owner-identified A1427; unverified"
+  }
+}

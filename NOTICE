@@ -1,0 +1,17 @@
+DWC2 Transport SDK includes code adapted from DWC2 HostLab
+Local source: ../dwc2-hostlab, commit 6df8d90
+Copyright (c) 2026 Ronald Valenzuela. Licensed under MIT; see LICENSE.
+Source: src/lib/backend_linux.c, backend_mock.c, usb_backend.c.
+JSONL writer and clock sampler in tools/hostlab are adapted from
+src/lib/jsonl.c, clock.c and include/hostlab/{jsonl.h,hl_clock.h}.
+The SDK does not include HostLab's experimental kernel patches.
+
+The identification database records factual USB identifiers and links to
+usbids, usbmuxd, libirecovery and Apple documentation. Their source code or
+complete databases are not incorporated. The generated C table is project code.
+
+Static ARMv6 release binaries link GNU libc and GCC runtime components supplied
+by Debian's cross toolchain. Their copyright/license texts are included under
+licenses/ in release archives, together with TOOLCHAIN_PACKAGES and BUILD_IMAGE.
+Corresponding application source and relinkable objects are provided under
+source/ and relink/. See docs/m7-release.md for source and relinking details.

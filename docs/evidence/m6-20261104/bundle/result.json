@@ -1,0 +1,67 @@
+{
+  "checks": {
+    "descriptor_characterization": true,
+    "device_capture": true,
+    "observer_evidence_complete": true,
+    "process_termination": true,
+    "serial_redacted": true,
+    "standard_transfers": true,
+    "trace_complete": true
+  },
+  "firmware_or_security_changes": false,
+  "inspection_warnings": [],
+  "milestone": "M6",
+  "observers": [
+    {
+      "disconnected_events": 0,
+      "physical_reconnect_observed": false,
+      "probe_after_reconnect": false,
+      "probes_ok": 0,
+      "reconnected_events": 0,
+      "summary": {
+        "connected": 1,
+        "disconnected": 0,
+        "errors": 0,
+        "event": "summary",
+        "mono_ns": 3786771405625,
+        "physical_identity_verification": false,
+        "polls": 6,
+        "probes_failed": 0,
+        "probes_ok": 0,
+        "reason": "duration",
+        "reconnected": 0,
+        "schema": 1,
+        "time_utc": "2026-11-04T16:01:37.171785+00:00"
+      },
+      "valid": true
+    },
+    {
+      "disconnected_events": 2,
+      "physical_reconnect_observed": true,
+      "probe_after_reconnect": true,
+      "probes_ok": 2,
+      "reconnected_events": 2,
+      "summary": {
+        "connected": 1,
+        "disconnected": 2,
+        "errors": 1,
+        "event": "summary",
+        "mono_ns": 3622581976482,
+        "physical_identity_verification": false,
+        "polls": 34,
+        "probes_failed": 1,
+        "probes_ok": 2,
+        "reason": "reconnected",
+        "reconnected": 2,
+        "schema": 1,
+        "time_utc": "2026-11-04T15:58:52.982350+00:00"
+      },
+      "valid": true
+    }
+  ],
+  "passed": true,
+  "physical_model_verified": false,
+  "physical_reconnect_observed": true,
+  "probe_after_reconnect": true,
+  "schema": 1
+}

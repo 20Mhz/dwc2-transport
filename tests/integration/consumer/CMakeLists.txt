@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(sdk_consumer C)
+find_package(DWC2Transport 1 REQUIRED CONFIG)
+add_executable(consumer ../../../examples/read_descriptor.c)
+target_link_libraries(consumer PRIVATE DWC2::dwc2_transport)

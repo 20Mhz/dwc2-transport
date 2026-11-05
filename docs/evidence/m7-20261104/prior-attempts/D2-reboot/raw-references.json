@@ -1,0 +1,25 @@
+{
+  "storage": "local-only",
+  "files": [
+    {
+      "path": "SHA256SUMS",
+      "sha256": "a60740be0228fcb60af8cc36ff1d528488bdd2ff38f1811dcb9803dc814e2b22"
+    },
+    {
+      "path": "metadata.json",
+      "sha256": "f0359c6f5f3e4e38c34750e932cd9dd32665a5255339f49f9642ab30dc5a3f92"
+    },
+    {
+      "path": "observer-0.jsonl",
+      "sha256": "7778e8ebb5f6d8f10ce86214e2110c7e4d65fe435e2e285a7d93c94fe66147f3"
+    },
+    {
+      "path": "observer-0.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "result.json",
+      "sha256": "b7aabcbae14f181a7b3261efd0c30ae17e79b663e7ac5423abb24cee3992336b"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "ready_before_signal": true,
+  "collector_returncode": 0,
+  "stderr_empty": true,
+  "collector_reaped": true
+}

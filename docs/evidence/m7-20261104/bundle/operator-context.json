@@ -1,0 +1,9 @@
+{
+  "D2": {
+    "source": "operator_report",
+    "cable_reconnected": true,
+    "power_maintained": true,
+    "reboot_reported": false,
+    "note": "Operator confirmed USB reconnection with Pi and Apple TV power maintained and no reboot during this separate window."
+  }
+}

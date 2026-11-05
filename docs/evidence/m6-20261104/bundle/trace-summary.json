@@ -1,0 +1,35 @@
+{
+  "channel_starts": 30,
+  "complete_phase_urbs": 10,
+  "control_urbs_ok": 10,
+  "direct_urb_pointer_correlation": false,
+  "errors": [],
+  "expected_control_urbs": 10,
+  "passed": true,
+  "profile": "fast",
+  "session_warnings": [],
+  "teardown": {
+    "errors": [],
+    "removed": [
+      "hl_kill",
+      "hl_unlink",
+      "hl_port_reset",
+      "hl_urb_dequeue",
+      "hl_hc_halt",
+      "hl_stall",
+      "hl_nak",
+      "hl_xacterr",
+      "hl_babble"
+    ]
+  },
+  "usbmon_stats": [
+    {
+      "dropped": 0,
+      "ev": "stats",
+      "queued": 0,
+      "recorded": 20,
+      "src": "usbmon"
+    }
+  ],
+  "usbmon_unpaired_with_kprobes": 10
+}

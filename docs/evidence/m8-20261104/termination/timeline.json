@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "valid": true,
+  "errors": [],
+  "session_id": "06c8c678-8339-48e5-95c2-9a846695b116",
+  "outcome": "NO_IDENTITY_CHANGE_OBSERVED",
+  "identity_change_captured": false,
+  "observed_identities": [
+    {
+      "vendor_id": 1452,
+      "product_id": 4737
+    }
+  ],
+  "timeline": [],
+  "initial_observations": [
+    {
+      "port": "1-1",
+      "identity": {
+        "vendor_id": 1452,
+        "product_id": 4737,
+        "address": 14
+      },
+      "sample": {
+        "sequence": 3,
+        "poll": 1,
+        "started_mono_ns": 41605494678671,
+        "completed_mono_ns": 41605538890761,
+        "time_utc": "2026-11-05T02:31:55.943916+00:00"
+      }
+    }
+  ],
+  "final_checkpoints": [
+    {
+      "port": "1-1",
+      "last_confirmed_identity": {
+        "vendor_id": 1452,
+        "product_id": 4737,
+        "address": 14
+      },
+      "sample": {
+        "sequence": 3,
+        "poll": 1,
+        "started_mono_ns": 41605494678671,
+        "completed_mono_ns": 41605538890761,
+        "time_utc": "2026-11-05T02:31:55.943916+00:00"
+      },
+      "unresolved_gap_samples": 0,
+      "first_unresolved_absence": null
+    }
+  ],
+  "operator_statements": [],
+  "diagnostic_errors": [],
+  "warnings": [],
+  "sampling": {
+    "polls": 1,
+    "nominal_interval_seconds": 0.5,
+    "maximum_start_gap_ns": 0
+  },
+  "uncertainties": [
+    "Bounds span cached-read windows; electrical transition time is not measured.",
+    "Operator report receipt is not the measured physical action time.",
+    "Events within one sample cannot be totally ordered from polling.",
+    "Topology does not authenticate the physical unit."
+  ],
+  "wall_clock_deviation_sequences": []
+}
