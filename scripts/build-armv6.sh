@@ -8,7 +8,7 @@ if ! docker image inspect "$image" >/dev/null 2>&1; then
     docker build -t "$image" "$root/docker"
 fi
 export SOURCE_DATE_EPOCH="$(python3 "$root/scripts/source-info.py" --field epoch)"
-docker run --rm -e SOURCE_DATE_EPOCH -v "$root:/work" -w /work "$image" bash -euo pipefail -c '
+docker run --rm --user "$(id -u):$(id -g)" -e SOURCE_DATE_EPOCH -v "$root:/work" -w /work "$image" bash -euo pipefail -c '
 make BUILD=build/armv6 CC=arm-linux-gnueabi-gcc AR=arm-linux-gnueabi-ar \
     CFLAGS="-O2 -march=armv6kz -marm" LDFLAGS=-static all test \
     TEST_RUNNER="qemu-arm-static -cpu arm1176"
