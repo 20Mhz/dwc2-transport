@@ -56,13 +56,14 @@ def fixture(steps):
 
 
 class TimelineTests(unittest.TestCase):
-    def test_real_mock_loop_records_full_sampling_windows(self):
+    def test_simulated_loop_records_full_sampling_windows(self):
         import test_observer as fixtures
         with tempfile.TemporaryDirectory() as directory:
             root=fixtures.SnapshotTests().fixture(directory);rows=[]
             def command(command,timeout):
                 return {'devices':[fixtures.INFO]} if str(command[0]).endswith('usb-discover') else fixtures.INSPECTION
-            with patch('dwc2_diag.observer.command_json',side_effect=command):
+            with patch('dwc2_diag.observer.command_json',side_effect=command), \
+                    patch('dwc2_diag.observer.time',fixtures.SimulatedClock()):
                 observe('/fake',root,.2,.05,probe=True,record_samples=True,session_id=SESSION,emit=rows.append)
             report=analyze(rows)
             self.assertTrue(report['valid'],report)
@@ -136,7 +137,8 @@ class TimelineTests(unittest.TestCase):
             fixtures.SnapshotTests().fixture(sysfs);rows=[]
             def command(command,timeout):
                 return {'devices':[fixtures.INFO]} if str(command[0]).endswith('usb-discover') else fixtures.INSPECTION
-            with patch('dwc2_diag.observer.command_json',side_effect=command):
+            with patch('dwc2_diag.observer.command_json',side_effect=command), \
+                    patch('dwc2_diag.observer.time',fixtures.SimulatedClock()):
                 observe('/fake',sysfs,.15,.05,probe=True,record_samples=True,session_id=SESSION,emit=rows.append)
             public=root/'record';public.mkdir();analysis=analyze(rows)
             meta={'sdk_revision':'a'*40,'application_revision':'b'*40,'hostlab_revision':'c'*40,

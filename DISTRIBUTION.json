@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "version": "1.2.0",
-  "development_revision": "8556d00b6b09c3f6aec2a181d74a98186b212865",
+  "development_revision": "409ba6d5b182a9c4600d0299073d12ad3032c02a",
   "sdk_build_revision": "8556d00b6b09c3f6aec2a181d74a98186b212865",
   "snapshot": "Reviewed source tree; development Git history, legacy raw traces and ignored recordings omitted.",
   "privacy": {
@@ -180,11 +180,11 @@
     "tests/integration/test_cli.py": "c7924d58519a01eaff1787bfd3b7d6f6bd30528ec45b9ac140e3e7b352ec932c",
     "tests/integration/test_evidence.py": "50ed42ed0096de42017659e03e63cfafeaf65224173fc56530cdc56935ea0a9b",
     "tests/integration/test_linux.c": "cf930ddcfd0f4f5c3d2f8c983e2128d7bbc6a6fed1adedd7761f46289b5995f5",
-    "tests/integration/test_observer.py": "247871878884dc21f677e1e0d80c4ac33b746004a41d5d0cb3cea1c6e9cbb08e",
+    "tests/integration/test_observer.py": "07d7c2f2a344bdba6a0c4162c31a6301208a211ddafab18f3b246e87403d2fe9",
     "tests/integration/test_privacy.py": "eb569cb52ebfd52d034830f1bce212c2899b64db616d5f7d78e3bb70815ac181",
-    "tests/integration/test_recording.py": "9b2b5dafef2a669f99c1104ccf8adaf71ac727a87f08432358580487c049b8e7",
+    "tests/integration/test_recording.py": "733f026bb432cab03e3509b3e7f8401d811496de413d98e03fd554d34a79dd1b",
     "tests/integration/test_release.py": "c6a927ca74c4ae031d8c4fcbc278da9eae1e7656a603f39c9e26d46f80ab6ac3",
-    "tests/integration/test_timeline.py": "46c9c82764335fe36f8aeafa1bd728a90d53fb47f4dbb47e07bec00b17381ced",
+    "tests/integration/test_timeline.py": "982e68ddd4ec57740e1e6e6250220c8103bc82f15fab814c7d155228eb3a1fe1",
     "tests/unit/test_async.c": "b64096d6204a97fb995f08eb3c86171a17879038bda84291fd5f66badbe87a23",
     "tests/unit/test_core.c": "a1997cc96f8738a704362d5b163a0982f01a835bb32eaff2d06108cc3f4c6501",
     "tests/unit/test_descriptors.c": "8db53042ade208c47ac7e6774c7890fa56f641f910a709c082b89aaf6fdd889f",

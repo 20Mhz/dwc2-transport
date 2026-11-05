@@ -23,22 +23,6 @@ from dwc2_diag.evidence import write_manifest
 import test_observer as fixtures
 
 
-class SimulatedClock:
-    """Deterministic fixture time; filesystem/scheduler latency is not evidence."""
-    def __init__(self):
-        self.ns=1_000_000_000
-
-    def monotonic(self):
-        return self.ns/1_000_000_000
-
-    def monotonic_ns(self):
-        self.ns+=1000
-        return self.ns
-
-    def sleep(self,seconds):
-        self.ns+=max(1,int(seconds*1_000_000_000))
-
-
 class RecordingTests(unittest.TestCase):
     def events(self, root, reconnect=False):
         fixture=fixtures.SnapshotTests().fixture(root);rows=[]
@@ -50,7 +34,7 @@ class RecordingTests(unittest.TestCase):
                 return {'devices':[fixtures.INFO]}
             return fixtures.INSPECTION
         with patch('dwc2_diag.observer.command_json',side_effect=command), \
-                patch('dwc2_diag.observer.time',SimulatedClock()):
+                patch('dwc2_diag.observer.time',fixtures.SimulatedClock()):
             observe('/fake',fixture,.16,.05,probe=True,emit=rows.append,stop_after_reconnect=reconnect)
         return rows
 

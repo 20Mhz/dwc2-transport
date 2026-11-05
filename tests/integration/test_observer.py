@@ -33,6 +33,22 @@ def state(address=3, pid=4775):
             'active_configuration': 1, 'driver_bindings': [], 'configurations': []}
 
 
+class SimulatedClock:
+    """Deterministic fixture time; filesystem/scheduler latency is not evidence."""
+    def __init__(self):
+        self.ns=1_000_000_000
+
+    def monotonic(self):
+        return self.ns/1_000_000_000
+
+    def monotonic_ns(self):
+        self.ns+=1000
+        return self.ns
+
+    def sleep(self,seconds):
+        self.ns+=max(1,int(seconds*1_000_000_000))
+
+
 class IdentificationTests(unittest.TestCase):
     def test_known_unknown_and_shared_modes(self):
         db = load_database()
@@ -168,11 +184,12 @@ class SnapshotTests(unittest.TestCase):
                 read_snapshot(INFO,root,load_database())
             self.assertEqual(error.exception.status,'no_device')
 
-    def test_real_polling_loop_uses_sdk_discovery_and_signal_summary(self):
+    def test_simulated_polling_loop_uses_sdk_discovery_and_signal_summary(self):
         with tempfile.TemporaryDirectory() as directory:
             root=self.fixture(directory);events=[]
             result=subprocess.CompletedProcess([],0,json.dumps({'devices':[INFO]}).encode(),b'')
-            with patch('dwc2_diag.observer.subprocess.run',return_value=result) as run:
+            with patch('dwc2_diag.observer.subprocess.run',return_value=result) as run, \
+                    patch('dwc2_diag.observer.time',SimulatedClock()):
                 totals=observe('/fake/bin',root,0.12,0.05,emit=events.append)
             self.assertGreaterEqual(totals['polls'],2)
             self.assertEqual(totals['connected'],1)
@@ -193,7 +210,8 @@ class SnapshotTests(unittest.TestCase):
                 attempts[0]+=1
                 if attempts[0]==1:raise ObservationError('timeout','probe','timeout')
                 return INSPECTION
-            with patch('dwc2_diag.observer.command_json',side_effect=run):
+            with patch('dwc2_diag.observer.command_json',side_effect=run), \
+                    patch('dwc2_diag.observer.time',SimulatedClock()):
                 totals=observe('/fake/bin',root,1.1,0.05,probe=True,emit=events.append)
             self.assertEqual(totals['probes_failed'],1)
             self.assertEqual(totals['probes_ok'],1)
@@ -207,7 +225,8 @@ class SnapshotTests(unittest.TestCase):
                 if str(command[0]).endswith('usb-discover'):return {'devices':[INFO]}
                 attempts.append(command)
                 raise ObservationError('protocol','control','failed',71,1)
-            with patch('dwc2_diag.observer.command_json',side_effect=run):
+            with patch('dwc2_diag.observer.command_json',side_effect=run), \
+                    patch('dwc2_diag.observer.time',SimulatedClock()):
                 observe('/fake/bin',root,.35,.05,probe=True,emit=events.append,probe_attempts=2,retry_delay=.05)
             self.assertEqual(len(attempts),2)
             self.assertEqual(events[-1]['completion_status'],'incomplete')
@@ -231,7 +250,8 @@ class SnapshotTests(unittest.TestCase):
                 paths.append(command[2])
                 if len(paths)==1:raise ObservationError('no_device','open','stale path',19)
                 return {**INSPECTION,'device':{**INSPECTION['device'],'address':4}}
-            with patch('dwc2_diag.observer.command_json',side_effect=run):
+            with patch('dwc2_diag.observer.command_json',side_effect=run), \
+                    patch('dwc2_diag.observer.time',SimulatedClock()):
                 observe('/fake/bin',root,1,.05,probe=True,emit=events.append,stop_after_reconnect=True)
             self.assertEqual(paths,['/dev/bus/usb/001/003','/dev/bus/usb/001/004'])
             self.assertEqual(events[-1]['reason'],'reconnected')
@@ -247,7 +267,8 @@ class SnapshotTests(unittest.TestCase):
                     (root/'1-1/devnum').write_text('4')
                     return {'devices':[{**INFO,'address':4,'path':'/dev/bus/usb/001/004'}]}
                 return {'devices':[INFO]}
-            with patch('dwc2_diag.observer.command_json',side_effect=run):
+            with patch('dwc2_diag.observer.command_json',side_effect=run), \
+                    patch('dwc2_diag.observer.time',SimulatedClock()):
                 totals=observe('/fake/bin',root,1,.05,emit=events.append,stop_after_reconnect=True)
             self.assertEqual(totals['polls'],3)
             self.assertEqual(events[-1]['reason'],'reconnected')
